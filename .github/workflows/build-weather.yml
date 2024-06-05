@@ -1,0 +1,25 @@
+name: Weather App Build
+
+on:
+ push: 
+  branches: [release/1.0]
+
+jobs:
+ build-angular:
+  runs-on: ubuntu-latest
+
+  steps:
+   - uses: actions/checkout@v4
+
+   - name: setup Node Js
+     uses: actions/setup-node@v4
+     with: 
+      node-version: 18.x
+
+   - name: Install Npm Dependencies
+     run: npm run install
+
+   - name: Build
+     run: npm run build
+   
+   
