@@ -9,7 +9,7 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class ApiServiceService {
 
-  private apiUrlBase = 'http://api.weatherapi.com/v1/forecast.json?key=285d928554364fc9b64184342240506&q=';
+  private apiUrlBase = 'https://api.weatherapi.com/v1/forecast.json?key=285d928554364fc9b64184342240506&q=';
   private apiEnd = '&days=1&aqi=no&alerts=no';
 
   constructor(private http: HttpClient) { }
